@@ -7,7 +7,7 @@ let env = {
 
   BASE_ROUTE_URL: process.env.VUE_APP_PUBLICPATH,
 
-  BASE_URL: '/web-template'
+  BASE_URL: '/template-web'
 
 };
 

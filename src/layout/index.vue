@@ -1,8 +1,6 @@
 <template>
   <div>
-    <header>
-      header
-    </header>
+    <Header />
     <main>
       <router-view />
     </main>
@@ -11,3 +9,12 @@
     </footer>
   </div>
 </template>
+
+<script lang="ts">
+import Header from './header/index.vue'
+export default {
+  components: {
+    Header,
+  }
+}
+</script>

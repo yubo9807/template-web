@@ -17,6 +17,12 @@ export default defineStore("variable", {
     setTheme(theme: State['theme']) {
       this.theme = theme;
       localStorage.setItem(THEME_KEY, theme);
+      if (theme === 'OS') {
+        const prefers = matchMedia('(prefers-color-scheme: dark)');
+        document.documentElement.dataset.theme = prefers.matches ? 'dark' : 'light';
+      } else {
+        document.documentElement.dataset.theme = theme;
+      }
     },
 
     /**
@@ -35,7 +41,6 @@ export default defineStore("variable", {
         if (cacheTheme !== 'OS') return;
         document.documentElement.dataset.theme = prefers.matches ? 'dark' : 'light';
       }
-
       prefers.addEventListener('change', followOS);
     }
   }

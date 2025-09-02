@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper-c27b6911.js";import{o as s,c as a,e as _}from"./index-78986bb2.js";const t={},c={class:"page-home"};function n(r,e){return s(),a("div",c,e[0]||(e[0]=[_("div",{class:"leayer box"}," home ",-1)]))}const l=o(t,[["render",n],["__scopeId","data-v-695a70ae"]]);export{l as default};

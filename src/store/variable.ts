@@ -31,9 +31,7 @@ export default defineStore("variable", {
     init() {
       let theme = this.theme;
       const prefers = matchMedia('(prefers-color-scheme: dark)');
-      if (this.theme !== 'OS') {
-        theme = prefers.matches ? 'dark' : 'light';
-      }
+      if (this.theme === 'OS') return;
       this.setTheme(theme);
 
       function followOS() {
